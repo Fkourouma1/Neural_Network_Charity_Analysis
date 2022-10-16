@@ -17,6 +17,7 @@ Data Preprocessing
 Feature and Target Selection
 - The variable considered the target for our model is "IS_SUCCESSFUL"
 - The variables considered to be the features for our model are :
+
 		- EIN
 		- NAME
 		- APPLICATION_TYPE
@@ -32,16 +33,27 @@ Feature and Target Selection
 - The variables that we dropped from the input data are "EIN" and "NAME".
 Compiling, Training, and Evaluating the Model
 To optimize the model, 
-Attempt 1: we used three hidden layers, with 85, 35, and 10 neurons for layer1, layer2, and layer3 respectively
+Attempt 1: we used three hidden layers, with 85, 35, and 10 neurons for layer1, layer2, and layer3 respectively. 
+
+![1st_attempt_85_35_10](https://user-images.githubusercontent.com/103543959/196058666-004aa999-9113-4b93-9b96-7fc377019975.png)
 
 Attempt 2: we used three hidden layers, with 90, 70, and 50 neurons for layer1, layer2, and layer3 respectively
 
+![2st_attempt_90_70_50](https://user-images.githubusercontent.com/103543959/196058673-0421275f-0d35-4c3b-acc9-a9cf0610335e.png)
+
 Attempt 3: we used three hidden layers, with 100, 50, and 20 neurons for layer1, layer2, and layer3 respectively
 
-Attempt 4: we used three hidden layers, with 100, 70, and 300 neurons for layer1, layer2, and layer3 respectively.Then we also changed the activation type the sigmoid for the input and rely for the output.That decreased our model performance
+![3rd_attempt_100_50_20](https://user-images.githubusercontent.com/103543959/196058678-5e85df22-4049-47b7-9542-9bf04b99a445.png)
+
+Attempt 4: We tried the ramdom Forest model instead with three hidden layers, with 100, 70, and 300 neurons for layer1, layer2, and layer3 respectively.Then we also changed the activation type the sigmoid for the input and rely for the output.That decreased our model performance
+
+![4th_attempt](https://user-images.githubusercontent.com/103543959/196058688-a6399dc1-c30d-41d8-a8f9-50dbad469ef4.png)
 
 Attempt 5: we used three hidden layers, with 30 and 20 neurons for layer1, layer2, and  removed layer3.
 
+![73%](https://user-images.githubusercontent.com/103543959/196058721-9651d43d-c4d3-4d41-84fe-2327fadad7ec.png)
+
+![735](https://user-images.githubusercontent.com/103543959/196058704-ed144e0d-6756-4092-97d1-957fcfdcb83a.png)
 
 
 Summary
@@ -49,4 +61,4 @@ While the neural network model may be a robust machine learning algorithm, it di
 
 One recommendation is to use a larger dataset to train the neural network model to learn the general distribution of the dataset without overfitting.
 We may use the Balanced Random Forest Classifier, which combines the decision of multiple trees to create a strong model accuracy
-While model accuracy reached 75%, we may have a model that is overfitting. That is why a larger dataset will be appropriate to train our neural network model or any other model we choose to use.
+While model accuracy reached 73%, we may have a model that is overfitting. That is why a larger dataset will be appropriate to train our neural network model or any other model we choose to use.
